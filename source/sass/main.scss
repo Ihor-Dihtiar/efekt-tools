@@ -1,0 +1,65 @@
+/*------------header-------------*/
+
+// .header {
+//   & .container {
+//     padding: 0;
+//   }
+//   &__inner {
+//     height: 586px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//     overflow-x: hidden;
+//   }
+//   &__background {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     & img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   &__main {
+//     position: relative;
+//   }
+//   &__title {
+//     width: 327px;
+//     height: 74px;
+//     font-size: 48px;
+//     line-height: 74px;
+//     text-align: center;
+//     color: $white;
+//     border-top: 2px solid $red;
+//     border-bottom: 2px solid $red;
+//   }
+//   &__subtitle {
+//     margin: 5px 0 0 0;
+//     font-size: 17px;
+//     line-height: 2;
+//     text-align: center;
+//     color: $white;
+//     & span {
+//       padding: 0 8px;
+//     }
+//     & span:first-child {
+//       border-right: 2px solid $white;
+//     }
+//   }
+//   &__hire {
+//     display: block;
+//     width: 170px;
+//     height: 50px;
+//     color: $white;
+//     background-color: $red;
+//     text-align: center;
+//     font-size: 22px;
+//     line-height: 50px;
+//     border-radius: 5px;
+//     margin: 34px auto 0;
+//   }
+// }

@@ -1,0 +1,78 @@
+// // ------------colors-------------
+
+// $white: #ffffff;
+// $black: #3e3e3e;
+// $background-dark: #353541;
+// $background-black: #1d1d24;
+// $red: #fb6470;
+// $scale-circle: #e85662;
+// $border: #1d1d2b;
+// $light-bg: #f9f9f9;
+// $border-bottom: #e6e6e6;
+// //color: rgba(62, 62, 62, 0.8)
+// $contacts-text: #5d5d5d;
+// $social-bg: #717171;
+// $social-hover: #2ac2c8;
+
+// // ------------mixins-------------
+// @mixin title {
+//   &__title {
+//     font-size: 32px;
+//     font-weight: 600;
+//     line-height: 1.13;
+//     position: relative;
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       width: 76px;
+//       height: 2px;
+//       background-color: $red;
+//       bottom: -15px;
+//       left: 0;
+//     }
+//     /*------------media query-------------*/
+//     @include width(768) {
+//       font-size: 26px;
+//     }
+//   }
+// }
+
+// // ------------media query-------------
+// @mixin width($max-width, $min-width: 0) {
+//   @if ($min-width == 0) {
+//     @media screen and (max-width: $max-width - 0.02 + 'px') {
+//       @content;
+//     }
+//   } @else {
+//     @media screen and (min-width: $min-width + 'px') and (max-width: $max-width - 0.02 + 'px') {
+//       @content;
+//     }
+//   }
+// }
+
+// @function strip-unit($value) {
+//   @return $value / ($value * 0 + 1);
+// }
+
+// // ------------adaptive font-------------
+// @mixin adapt-fs($min-vw, $max-vw, $min-font-size, $max-font-size) {
+//   $u1: unit($min-vw);
+//   $u2: unit($max-vw);
+//   $u3: unit($min-font-size);
+//   $u4: unit($max-font-size);
+
+//   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+//     & {
+//       font-size: $min-font-size;
+//       @media screen and (min-width: $min-vw) {
+//         font-size: calc(
+//           #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+//             ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+//         );
+//       }
+//       @media screen and (min-width: $max-vw) {
+//         font-size: $max-font-size;
+//       }
+//     }
+//   }
+// }
