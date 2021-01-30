@@ -7,7 +7,69 @@
   right: 0;
   z-index: 10;
   &__inner {
+    display: flex;
+    justify-content: space-between;
     padding: 32px 80px 0 89px;
+  }
+  &__nav {
+    margin-left: auto;
+    & ul {
+      display: inline-flex;
+    }
+    & li {
+      display: flex;
+      white-space: nowrap;
+    }
+    & a {
+      margin: 0 16px;
+      padding: 14px 10px 14px 0;
+    }
+  }
+  &__efekt {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.efekt {
+  &__type {
+    display: flex;
+    align-items: center;
+    // opacity: 0.4;
+    border-radius: 32px;
+    background: rgba(26, 26, 26, 0.4);
+    & span {
+      margin-right: 35px;
+    }
+  }
+  &__garden {
+    & svg {
+      width: 30px;
+      height: 28px;
+    }
+  }
+  &__snow {
+    margin-left: 16px;
+    & svg {
+      width: 26px;
+      height: 30px;
+    }
+    &.active {
+      background: $active-bg;
+    }
+    & .efekt__circle.active {
+      background: $active-bg;
+    }
+  }
+  &__circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 32px;
+    background-color: $dark-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
   }
 }
 
@@ -17,6 +79,7 @@
   & .container {
     height: 100%;
     position: relative;
+    display: flex;
   }
   &__video-bg {
     position: absolute;
@@ -28,7 +91,54 @@
       object-fit: cover;
     }
   }
+  &__bottom {
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    position: relative;
+    align-self: flex-end;
+    padding: 0 90px 40px 81px;
+  }
 }
+
+.winner-block {
+  &__award {
+    font-size: 24px;
+    text-decoration: underline;
+  }
+}
+
+.phone {
+  &__number {
+    font-size: 24px;
+    line-height: 1.6em;
+  }
+}
+
+.scroll-btn {
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  transform: translateX(50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__vert-line {
+    width: 0;
+    height: 60px;
+    border: 1px solid #535353;
+  }
+  &__text {
+    color: #535353;
+    margin-top: 18px;
+  }
+  &__down-arrow {
+    margin-top: 10px;
+    height: 16px;
+  }
+}
+
 // .header {
 //   & .container {
 //     padding: 0;

@@ -29,16 +29,16 @@ block main
                             a(href="#") Прочность
                         li
                             a(href="#") Где купить?
-                .header__efekt
-                    a.efekt__garden(href="#")
+                .header__efekt.efekt
+                    a.efekt__type.efekt__garden(href="#")
                         .efekt__circle
                             svg(xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31" fill="none")
                                 path(d="M21.5895 29.3268C20.6234 29.6028 13.8608 31.535 7.78829 27.2566C2.40581 23.6683 -0.0784071 16.7677 1.43973 10.0051C8.20232 8.625 14.9649 11.1092 18.8293 16.3537C22.9696 21.8742 21.7275 28.2227 21.5895 29.3268Z" stroke="#535353" stroke-width="2" stroke-miterlimit="10")
                                 path(d="M21.5897 20.9077C21.1756 20.3556 18.0013 16.2153 19.1054 11.1088C20.0715 6.5544 24.0739 2.96609 29.0423 2C31.8026 6.14036 32.0786 11.3848 29.5944 15.3872C26.9721 19.6656 22.4177 20.7697 21.5897 20.9077Z" stroke="#535353" stroke-width="2" stroke-miterlimit="10")
                                 path(d="M11.1001 19.2511C14.5504 22.5634 18.1387 26.0137 21.589 29.326" stroke="#535353" stroke-width="2" stroke-miterlimit="10")
                         span EFEKT Сад
-                    a.efekt__snow(href="#")
-                        .efekt__circle
+                    a.efekt__type.efekt__snow.active(href="#")
+                        .efekt__circle.active
                             svg(xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 28 30" fill="none")
                                 path(d="M14.0283 15.0156V0" stroke="white" stroke-width="2" stroke-miterlimit="10")
                                 path(d="M10.5356 2.375L14.0285 5.90807" stroke="white" stroke-width="2" stroke-miterlimit="10")
@@ -78,7 +78,9 @@ block main
                     span.phone__code 8 (800)
                     span.phone__number  707 09 91
 
-            .main__down-scroll-btn
-                .vert-line
-                .text Вниз
-                .down-arrow
+            a.scroll-btn(href="#")
+                .scroll-btn__vert-line
+                .scroll-btn__text Вниз
+                .scroll-btn__down-arrow
+                    svg(xmlns="http://www.w3.org/2000/svg" width="36" height="23" viewBox="0 0 36 23" fill="none")
+                        path(d="M30.4559 0.728166L17.728 13.4561L5.00011 0.728166" stroke="#535353" stroke-width="2")
