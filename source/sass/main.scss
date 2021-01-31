@@ -35,11 +35,11 @@
   &__type {
     display: flex;
     align-items: center;
-    // opacity: 0.4;
     border-radius: 32px;
     background: rgba(26, 26, 26, 0.4);
     & span {
       margin-right: 35px;
+      white-space: nowrap;
     }
   }
   &__garden {
@@ -69,9 +69,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     margin-right: 12px;
   }
 }
+
+/*------------main section-------------*/
 
 .main {
   width: 100%;
@@ -139,66 +142,44 @@
   }
 }
 
-// .header {
-//   & .container {
-//     padding: 0;
-//   }
-//   &__inner {
-//     height: 586px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//     overflow-x: hidden;
-//   }
-//   &__background {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     & img {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: cover;
-//     }
-//   }
-//   &__main {
-//     position: relative;
-//   }
-//   &__title {
-//     width: 327px;
-//     height: 74px;
-//     font-size: 48px;
-//     line-height: 74px;
-//     text-align: center;
-//     color: $white;
-//     border-top: 2px solid $red;
-//     border-bottom: 2px solid $red;
-//   }
-//   &__subtitle {
-//     margin: 5px 0 0 0;
-//     font-size: 17px;
-//     line-height: 2;
-//     text-align: center;
-//     color: $white;
-//     & span {
-//       padding: 0 8px;
-//     }
-//     & span:first-child {
-//       border-right: 2px solid $white;
-//     }
-//   }
-//   &__hire {
-//     display: block;
-//     width: 170px;
-//     height: 50px;
-//     color: $white;
-//     background-color: $red;
-//     text-align: center;
-//     font-size: 22px;
-//     line-height: 50px;
-//     border-radius: 5px;
-//     margin: 34px auto 0;
-//   }
-// }
+/*------------media queries-------------*/
+
+@include width(1760) {
+  .header {
+    &__nav a {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+}
+
+@include width(1630) {
+  .header {
+    &__inner {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@include width(1520) {
+  .header {
+    &__logo img {
+      width: 80px;
+      height: 80px;
+    }
+    &__nav a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  .efekt {
+    &__circle {
+      width: 48px;
+      height: 48px;
+    }
+    &__type span {
+      margin-right: 20px;
+    }
+  }
+}
