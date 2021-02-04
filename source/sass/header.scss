@@ -236,6 +236,14 @@
     align-items: center;
     border-radius: 32px;
     background: rgba(26, 26, 26, 0.4);
+    @include efekt-transition;
+    -webkit-tap-highlight-color: transparent;
+    &.active {
+      background: $active-bg;
+      & .efekt__circle {
+        background: $active-bg;
+      }
+    }
   }
   &__garden {
     & svg {
@@ -274,12 +282,6 @@
         height: 17.1px;
       }
     }
-    &.active {
-      background: $active-bg;
-    }
-    & .efekt__circle.active {
-      background: $active-bg;
-    }
   }
   &__circle {
     width: 56px;
@@ -291,6 +293,7 @@
     justify-content: center;
     flex-shrink: 0;
     margin-right: 12px;
+    @include efekt-transition;
     /*------------media queries-------------*/
     @include width(1520) {
       width: 48px;

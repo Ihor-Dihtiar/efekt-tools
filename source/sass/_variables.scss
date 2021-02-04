@@ -16,6 +16,10 @@ $grey-border: #535353;
 
 // ------------mixins-------------
 
+@mixin efekt-transition {
+  transition: background-color 0.4s;
+}
+
 // ------------media query-------------
 @mixin width($max-width, $min-width: 0) {
   @if ($min-width == 0) {
