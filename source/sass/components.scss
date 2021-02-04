@@ -7,10 +7,16 @@ html {
   font-family: 'Rubik', sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 500;
   color: $main-text-color;
+  cursor: url('../img/default-cursor.png'), auto;
 }
 
 .container {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+}
+
+a,
+button {
+  cursor: url('../img/cursor-link.png'), auto;
 }
