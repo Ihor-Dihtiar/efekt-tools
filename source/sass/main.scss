@@ -1,111 +1,3 @@
-/*------------header-------------*/
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    padding: 32px 80px 0 89px;
-  }
-  &__nav {
-    margin-left: auto;
-    & ul {
-      display: inline-flex;
-    }
-    & li {
-      display: flex;
-      white-space: nowrap;
-    }
-    & a {
-      margin: 0 16px;
-      padding: 14px 10px 14px 0;
-
-      /*------------media queries-------------*/
-      @include adapt-fs(1280px, 1400px, 14px, 16px);
-    }
-  }
-  &__efekt {
-    display: flex;
-    align-items: flex-start;
-  }
-}
-
-.mobile-menu {
-  &__menu-btn {
-    width: 35px;
-    height: 35px;
-  }
-}
-
-.menu-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__icon {
-    width: 24px;
-  }
-  &__line {
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    &:not(:last-child) {
-      margin-bottom: 5px;
-    }
-    &-2 {
-      width: 19px;
-    }
-  }
-}
-
-.efekt {
-  &__type {
-    display: flex;
-    align-items: center;
-    border-radius: 32px;
-    background: rgba(26, 26, 26, 0.4);
-    & span {
-      margin-right: 35px;
-      white-space: nowrap;
-      /*------------media queries-------------*/
-      @include adapt-fs(1280px, 1400px, 14px, 16px);
-    }
-  }
-  &__garden {
-    & svg {
-      width: 30px;
-      height: 28px;
-    }
-  }
-  &__snow {
-    margin-left: 16px;
-    & svg {
-      width: 26px;
-      height: 30px;
-    }
-    &.active {
-      background: $active-bg;
-    }
-    & .efekt__circle.active {
-      background: $active-bg;
-    }
-  }
-  &__circle {
-    width: 56px;
-    height: 56px;
-    border-radius: 32px;
-    background-color: $dark-bg;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-right: 12px;
-  }
-}
-
 /*------------main section-------------*/
 
 .main {
@@ -134,20 +26,61 @@
     position: relative;
     align-self: flex-end;
     padding: 0 90px 40px 81px;
+    /*------------media queries-------------*/
+    @include width(1630) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include width(1280) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+    @include width(768) {
+      padding-left: 24px;
+      padding-right: 24px;
+      text-align: center;
+      display: block;
+    }
   }
 }
 
 .winner-block {
+  &__win {
+    /*------------media queries-------------*/
+    @include width(768) {
+      font-size: 14px;
+      line-height: 1.8em;
+    }
+  }
   &__award {
     font-size: 24px;
     text-decoration: underline;
+    /*------------main section-------------*/
+    @include width(1280) {
+      max-width: 204px;
+    }
+    @include width(768) {
+      max-width: none;
+      font-size: 20px;
+      line-height: 1.2em;
+    }
   }
 }
 
 .phone {
+  /*------------media queries-------------*/
+  @include width(768) {
+    display: block;
+    margin-top: 6px;
+  }
   &__number {
     font-size: 24px;
     line-height: 1.6em;
+    /*------------media queries-------------*/
+    @include width(768) {
+      font-size: 20px;
+      line-height: 1.6em;
+    }
   }
 }
 
@@ -155,10 +88,14 @@
   position: absolute;
   bottom: 47px;
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*------------main section-------------*/
+  @include width(768) {
+    display: none;
+  }
   &__vert-line {
     width: 0;
     height: 60px;
@@ -175,47 +112,3 @@
 }
 
 /*------------media queries-------------*/
-
-@include width(1760) {
-  .header {
-    &__nav a {
-      margin-left: 8px;
-      margin-right: 8px;
-    }
-  }
-}
-
-@include width(1630) {
-  .header {
-    &__inner {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-  }
-  .main__bottom {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-@include width(1520) {
-  .header {
-    &__logo img {
-      width: 80px;
-      height: 80px;
-    }
-    &__nav a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-  .efekt {
-    &__circle {
-      width: 48px;
-      height: 48px;
-    }
-    &__type span {
-      margin-right: 20px;
-    }
-  }
-}

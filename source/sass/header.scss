@@ -1,0 +1,319 @@
+/*------------header-------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  & .container {
+    padding: 32px 80px 0 89px;
+    /*------------media queries-------------*/
+    @include width(1630) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @include width(1280) {
+      padding-top: 16px;
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+    @include width(768) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    /*------------media queries-------------*/
+    @include width(1280) {
+      align-items: center;
+      height: 80px;
+    }
+    @include width(768) {
+      height: 56px;
+    }
+  }
+  &__logo {
+    /*------------media queries-------------*/
+
+    @include adapt-fs(1400px, 1520px, 8px, 16px);
+    @include width(1280) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include width(768) {
+      font-size: 5.6px;
+    }
+    & img {
+      width: 10em;
+      height: 10em;
+    }
+  }
+  &__nav {
+    margin-left: auto;
+    /*------------media queries-------------*/
+    @include width(1280) {
+      display: none;
+    }
+    & ul {
+      display: inline-flex;
+    }
+    & li {
+      display: flex;
+      white-space: nowrap;
+    }
+    & a {
+      margin: 0 16px;
+      padding: 14px 10px 14px 0;
+
+      /*------------media queries-------------*/
+      @include width(1760) {
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+      @include width(1520) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      @include adapt-fs(1280px, 1400px, 14px, 16px);
+    }
+  }
+  &__efekt {
+    display: flex;
+    align-items: flex-start;
+    margin-left: auto;
+  }
+}
+
+.mobile-menu {
+  &__menu-btn {
+    width: 35px;
+    height: 35px;
+  }
+  &__block {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 10;
+    padding-top: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: all 0.4s;
+    /*------------media queries-------------*/
+    @include width(1280) {
+      display: block;
+    }
+    &.open {
+      transform: translateX(0);
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo img {
+    width: 80px;
+    height: 80px;
+  }
+  &__close-btn {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    margin-top: 19px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #fff;
+    }
+    &::before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 8px;
+    }
+  }
+  &__efekt {
+    display: flex;
+    margin-top: 10px;
+    & .efekt__type {
+      max-width: 130px;
+      width: 100%;
+    }
+    & .efekt__garden svg {
+      width: 17.3px;
+      height: 16px;
+    }
+    & .efekt__snow {
+      margin-left: 16px;
+      & svg {
+        width: 14.9px;
+        height: 17.1px;
+      }
+    }
+    & .efekt__circle {
+      width: 32px;
+      height: 32px;
+    }
+    & span {
+      font-size: 14px;
+      margin-left: 8px;
+    }
+  }
+  &__list {
+    margin-top: 16px;
+    padding: 16px 0;
+    border-top: 2px solid $grey-border;
+    border-bottom: 2px solid $grey-border;
+    & ul {
+      width: 110px;
+    }
+    & li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    & a {
+      display: block;
+      font-size: 14px;
+      line-height: 2.28em;
+    }
+  }
+  & .phone {
+    display: block;
+    margin-top: 17px;
+    margin-bottom: 30px;
+  }
+  & .phone__code {
+    font-size: 14px;
+    line-height: 1.8em;
+  }
+  & .phone__number {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+
+.menu-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /*------------media queries-------------*/
+  @include width(1280) {
+    display: flex;
+  }
+  &__icon {
+    width: 24px;
+  }
+  &__line {
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    &-2 {
+      width: 19px;
+    }
+  }
+}
+
+.efekt {
+  &__type {
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    background: rgba(26, 26, 26, 0.4);
+  }
+  &__garden {
+    & svg {
+      width: 30px;
+      height: 28px;
+      /*------------media queries-------------*/
+      @include width(1520) {
+        width: 26px;
+        height: 24px;
+      }
+      @include width(768) {
+        width: 17.3px;
+        height: 16px;
+      }
+    }
+  }
+  &__snow {
+    margin-left: 16px;
+    /*------------media queries-------------*/
+    @include width(1280) {
+      margin-left: 24px;
+    }
+    @include width(768) {
+      margin-left: 8px;
+    }
+    & svg {
+      width: 26px;
+      height: 30px;
+      /*------------media queries-------------*/
+      @include width(1520) {
+        width: 22.3px;
+        height: 25.7px;
+      }
+      @include width(768) {
+        width: 14.9px;
+        height: 17.1px;
+      }
+    }
+    &.active {
+      background: $active-bg;
+    }
+    & .efekt__circle.active {
+      background: $active-bg;
+    }
+  }
+  &__circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 32px;
+    background-color: $dark-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 12px;
+    /*------------media queries-------------*/
+    @include width(1520) {
+      width: 48px;
+      height: 48px;
+    }
+    @include width(1280) {
+      margin-right: 0;
+    }
+    @include width(768) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  & span {
+    margin-right: 35px;
+    white-space: nowrap;
+    /*------------media queries-------------*/
+    @include width(1520) {
+      margin-right: 20px;
+    }
+    @include adapt-fs(1280px, 1400px, 14px, 16px);
+    @include width(1280) {
+      display: none;
+    }
+  }
+}
