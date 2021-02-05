@@ -151,3 +151,57 @@ block main
                 .scroll-btn__down-arrow
                     svg(xmlns="http://www.w3.org/2000/svg" width="36" height="23" viewBox="0 0 36 23" fill="none")
                         path(d="M30.4559 0.728166L17.728 13.4561L5.00011 0.728166" stroke="#535353" stroke-width="2")
+
+    <!------------section goods------------->
+    section.goods
+        .container
+            .goods__inner
+                .goods__circle-bg
+                    //- img(src="#", alt="")
+                
+                .goods__card.card
+                    h2.card__title
+                    .card__function 
+                        .card__dest Назначение:
+                        ul
+                            li Уборка снега
+                            li Колка льда
+                            li Прополка
+                            li Убока листьев
+                    
+                    .card__sizes 
+                        div Размер, вес:
+                        ul.card__sizes-list
+                            li 38см х 156см;
+                            li 1,3кг
+                    
+                    .card__material
+                        div Материал:
+                        ul
+                            li алюминий,
+                            li высококачественный PP и PVC
+
+                    .card__stalk
+                        div Тип черенка:
+                        a(href="#") Алюминий
+                        a(href="#") Дерево
+
+                a.shop-link(href="#")
+                    span В магазин
+                    .shop-link__circle
+                        img(src="../img/shop-btn-circle.svg", alt="Circle")
+
+                .goods__img-block
+                    img(src="../img/e38-1.jpg", alt="Product image")
+
+                .goods__nav
+                    button
+                        img(src="../img/nav-arrow-left.svg", alt="arrow left")
+                    button
+                        img(src="../img/nav-arrow-right.svg", alt="arrow right")
+
+                .goods__warranty
+                    img(src="../img/warranty.png", alt="warranty")
+
+                .goods__made-in
+                    img(src="../img/made-in.png", alt="made in")
