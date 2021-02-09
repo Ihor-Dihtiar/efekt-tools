@@ -4,8 +4,8 @@ $main-text-color: #ffffff;
 $active-bg: #ff5800;
 $dark-bg: #1a1a1a;
 $grey-border: #535353;
-// $red: #fb6470;
-// $scale-circle: #e85662;
+$text-grey: #535353;
+$btn-bg-dark: #141414;
 // $border: #1d1d2b;
 // $light-bg: #f9f9f9;
 // $border-bottom: #e6e6e6;
@@ -15,7 +15,6 @@ $grey-border: #535353;
 // $social-hover: #2ac2c8;
 
 // ------------mixins-------------
-
 @mixin efekt-transition {
   transition: background-color 0.4s;
 }
